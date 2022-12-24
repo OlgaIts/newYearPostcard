@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, #221798 0%, #060958 100%);
+}
+
+.gifts {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gifts:nth-child(1) img {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  transform: scale(calc(0.1 * var(--i)));
+
+  animation: snowflake 2s linear infinite;
+  animation-delay: calc(0.3s * var(--i));
+}
+
+@keyframes snowflake {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.new-year-card {
+  font: 400 75px/2 'Press Start 2P', cursive;
+  text-align: center;
+  color: transparent;
+  background-image: linear-gradient(90deg, #fffb00, #ff9500, #66ff00, #0ab9ff, #ff00ff, #00ffff, #9000ff, #0ffca9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 300px 300px;
+  background-position: 0 0;
+  animation: new 2s infinite linear;
+}
+
+@keyframes new {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: 300px;
+  }
+}
