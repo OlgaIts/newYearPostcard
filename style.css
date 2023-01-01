@@ -69,3 +69,9 @@
     background-position-x: 300px;
   }
 }
+
+@media (min-width: 320px) and (max-width: 760px) {
+  .new-year-card {
+    font-size: 40px;
+  }
+}
